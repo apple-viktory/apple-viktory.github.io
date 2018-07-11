@@ -1,2 +1,2 @@
 # apple-viktory.github.io
-Конструктор чехлов для iPhone
+Кoнcтруктoр чеxлов для iPhоnе

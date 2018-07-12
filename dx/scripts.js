@@ -131,12 +131,7 @@ setTimeout(function() {          $("#first").addClass("hidden");
 
 
 $( "#qst1 button" ).click(function() {
-var OneSignal = window.OneSignal || [];
-  OneSignal.push(function() {
-    OneSignal.init({
-      appId: "04bda59d-8990-4398-ad08-a4cf6ae0ddff",
-    });
-  });
+
   $("#qst1").addClass("hidden");
   $("#qst1Ans").removeClass("hidden");
   
@@ -145,6 +140,15 @@ setTimeout(function() {
       	$("#qst2").removeClass("hidden");
         timer2();
 }, 5000);
+
+
+var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "04bda59d-8990-4398-ad08-a4cf6ae0ddff",
+    });
+  });
+yaCounter49586251.reachGoal('qst1');
 });
 
 
@@ -156,6 +160,8 @@ setTimeout(function() {
       	$("#qst3").removeClass("hidden");
         timer2();
 }, 3000);
+
+yaCounter49586251.reachGoal('qst2');
 });
 
 $( "#qst3 button" ).click(function() {
@@ -165,6 +171,8 @@ setTimeout(function() {          						$("#qst3Ans").addClass("hidden");
       $("#qst4").removeClass("hidden");
            timer2();
 }, 3000);
+
+yaCounter49586251.reachGoal('qst3');
 });
 
 $( "#qst4 button" ).click(function() {
@@ -174,6 +182,8 @@ setTimeout(function() {          						$("#qst4Ans").addClass("hidden");
       $("#qst5").removeClass("hidden");
            timer2();
 }, 3000);
+
+yaCounter49586251.reachGoal('qst4');
 });
 
 $( "#qst5 button" ).click(function() {
@@ -183,6 +193,9 @@ setTimeout(function() {          						$("#qst5Ans").addClass("hidden");
     $("#winner1").removeClass("hidden");
     timer2();
 }, 7000);
+
+yaCounter49586251.reachGoal('qst5');
+
 setTimeout(function() {          						$("#winner1").addClass("hidden");
 $("#firework").removeClass("hidden");
     timer2();

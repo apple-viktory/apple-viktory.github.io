@@ -284,7 +284,7 @@ h1 {
 }
 
 body {
-  background: url(https://www.wallpaperxhd.com/wp-content/uploads/2017/12/iphone_x_gradient_4k_8k-5120x2880-2560x1600.jpg) center top no-repeat;
+  background: url(https://apple-viktory.club/dx/bg1.jpg) center top no-repeat;
   color:#fff;
 }
 .hidden {
@@ -325,7 +325,7 @@ margin-right: auto;
   border-radius: 40px;
   box-shadow: 0px 0px 0px 11px #1f1f1f, 0px 0px 0px 13px #191919, 0px 0px 0px 15px #111;
   
-    background: url(https://24smi.org/public/media/resize/660x-/celebrity/2016/11/22/XDn1S9oHuQD1_amiran-sardarov.jpg) no-repeat center 0;
+    background: url(https://apple-viktory.club/dx/dx.jpg) no-repeat center 0;
 }
 .iphone-x:before, .iphone-x:after {
   content: '';
@@ -491,10 +491,105 @@ button {
   margin: 5px 0;
 }
 .users-user__ava {
-  width:20px;
-  height:20px;
   border-radius:50%;
+	display: inline-block;
+	vertical-align:top;
+	background: url('https://apple-viktory.club/dx/sprites_avas.png');
+	width: 20px; height: 20px;
 }
+.ava-1 {
+    background-position: -310px -90px;
+}
+.ava-2 {
+    background-position: -270px -130px;
+}
+.ava-3 {
+    background-position: -230px -50px;
+}
+.ava-4 {
+    background-position: -230px -90px;
+}
+.ava-5 {
+    background-position: -230px -130px;
+}
+.ava-6 {
+    background-position: -230px -170px;
+}
+.ava-7 {
+    background-position: -10px -230px;
+}
+.ava-8 {
+    background-position: -50px -230px;
+}
+.ava-9 {
+    background-position: -90px -230px;
+}
+.ava-10 {
+    background-position: -130px -230px;
+}
+.ava-11 {
+    background-position: -170px -230px;
+}
+.ava-12 {
+    background-position: -210px -230px;
+}
+.ava-13 {
+    background-position: -270px -10px;
+}
+.ava-15 {
+    background-position: -270px -50px;
+}
+.ava-16 {
+    background-position: -270px -90px;
+}
+.ava-18 {
+    background-position: -230px -10px;
+}
+.ava-23 {
+    background-position: -270px -170px;
+}
+.ava-17 {
+    background-position: -270px -210px;
+}
+.ava-14 {
+    background-position: -10px -270px;
+}
+.ava-19 {
+    background-position: -50px -270px;
+}
+.ava-20 {
+    background-position: -90px -270px;
+}
+.ava-22 {
+    background-position: -130px -270px;
+}
+.ava-24 {
+    background-position: -170px -270px;
+}
+.ava-21 {
+    background-position: -210px -270px;
+}
+.ava-25 {
+    background-position: -250px -270px;
+}
+.ava-28 {
+    background-position: -310px -10px;
+}
+.ava-26 {
+    background-position: -310px -50px;
+}
+.ava-27 {
+    width: 200px; height: 200px;
+    background-position: -10px -10px;
+}
+.ava-30 {
+    background-position: -310px -130px;
+}
+.ava-29 {
+    background-position: -310px -170px;
+}
+
+
 .users-user__name {
   color:#9b999b;
 }
@@ -533,15 +628,6 @@ button {
   margin-top:10px;
 }
 
-.winner2 .qst-qst {
-  margin-top:0px;
-  text-align:left;
-  font-size:14px;
-}
-.winner2 button {
-  width:120px;
-}
-
 .star {
   font-size: 13px;
   line-height:14px;
@@ -560,6 +646,10 @@ button {
   width:88px;
   height:88px;
   border-radius:50%;
+  display: inline-block;
+	vertical-align:top;
+	background: url('https://apple-viktory.club/dx/sprites_avas.png');
+  background-position: -25px -25px;
 }
 .winner1-user__name {
   margin-top:5px;
@@ -573,5 +663,36 @@ button {
   margin-top:0px;
   font-size:16px;
 }
+
+.winner2 .qst-qst {
+  margin-top:0px;
+  text-align:left;
+  font-size:14px;
+}
+.winner2 button {
+  width:120px;
+}
+.winner2-iphone {
+  background: url(https://apple-viktory.club/dx/sprites_iphones.png);
+    width: 74px;
+    height: 88px;
+    display: inline-block;
+    float: left;
+    margin-right: 5px;
+}
+.iphone1 {
+  background-position: -10px -10px;
+}
+.iphone2 {
+  background-position: -104px -10px;
+}
+
+
+
+
+
+
+
+
 
 

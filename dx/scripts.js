@@ -1,5 +1,35 @@
 $(document).ready(function() {
 
+///data
+  function getDate() {
+      var months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+      var date = new Date(); // Получаем сегодняшнюю дату
+      return date.getDate() + ' ' + months[date.getMonth()];
+  }
+  var newDate = getDate();
+  $('.js-date').text(newDate);
+  
+
+//time
+function UpdateClock() {
+    var tDate = new Date(new Date().getTime());
+    var in_hours = tDate.getHours()
+    var in_minutes=tDate.getMinutes();
+    var in_seconds= tDate.getSeconds();
+
+    if(in_minutes < 10)
+        in_minutes = '0'+in_minutes;
+    if(in_seconds<10)   
+        in_seconds = '0'+in_seconds;
+
+   document.getElementById('js-time').textContent = "" 
+                   + in_hours + ":" 
+                   + in_minutes;
+
+}
+UpdateClock();
+clockID = setInterval(UpdateClock, 20000);
+
 /* online now */
 var minNumber = 14494,
     maxNumber = 15395;

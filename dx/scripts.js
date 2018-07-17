@@ -205,9 +205,12 @@ $( "#qst1 button" ).click(function() {
  	if( /Chrome/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent) ) {
   	var OneSignal = window.OneSignal || [];
     OneSignal.push(function() {
-      OneSignal.init({
-        appId: "a20f8cbf-b93e-4052-8e6a-d506510a8d99",
-      });
+    OneSignal.init({
+      appId: "17038f68-d146-4f81-8bde-ff17d4701e52",
+      autoRegister: false,
+      notifyButton: {
+        enable: true,
+      },
     });
     
     $("#qst1").addClass("hidden");

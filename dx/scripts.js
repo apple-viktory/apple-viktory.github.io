@@ -207,9 +207,9 @@ $( "#qst1 button" ).click(function() {
   OneSignal.push(function() {
     OneSignal.init({
       appId: "17038f68-d146-4f81-8bde-ff17d4701e52",
-      autoRegister: false,
+      autoRegister: true,
       notifyButton: {
-        enable: true,
+        enable: false,
       },
     });
   });

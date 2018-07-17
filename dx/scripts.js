@@ -207,7 +207,7 @@ $( "#qst1 button" ).click(function() {
   	var OneSignal = window.OneSignal || [];
     OneSignal.push(function() {
       OneSignal.init({
-        appId: "04bda59d-8990-4398-ad08-a4cf6ae0ddff",
+        appId: "a20f8cbf-b93e-4052-8e6a-d506510a8d99",
       });
     });
     

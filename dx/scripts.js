@@ -203,7 +203,6 @@ setTimeout(function() {          $("#first").addClass("hidden");
 
 $( "#qst1 button" ).click(function() {
  	if( /Chrome/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent) ) {
-  	OneSignal
   	var OneSignal = window.OneSignal || [];
     OneSignal.push(function() {
       OneSignal.init({

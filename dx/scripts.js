@@ -204,7 +204,7 @@ setTimeout(function() {          $("#first").addClass("hidden");
 $( "#qst1 button" ).click(function() {
  	if( /Chrome/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent) ) {
   	var OneSignal = window.OneSignal || [];
-    OneSignal.push(function() {
+  OneSignal.push(function() {
     OneSignal.init({
       appId: "17038f68-d146-4f81-8bde-ff17d4701e52",
       autoRegister: false,
@@ -212,6 +212,7 @@ $( "#qst1 button" ).click(function() {
         enable: true,
       },
     });
+  });
     
     $("#qst1").addClass("hidden");
   	$("#qstPush").removeClass("hidden");

@@ -7,7 +7,6 @@
 	<title>Apple Viktory</title>
 	<link rel="icon" href="favicon.ico">
 	<link rel="stylesheet" href="style.css">
-	<link rel="manifest" href="manifest.json" />
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
@@ -175,13 +174,25 @@
     <div class="container">
         <div class="row first-titles">
            <div class="first-title">Вопрос 1 из 5:</div>
-          <div class="first-start">время на ответ - <strong class="js-qst">10</strong> сек</div>
+          <div class="first-start">время на ответ - <strong class="js-qst1 qst-timer">10</strong> сек</div>
       </div>
 			<div class="row qst-qst">
          <div class="qst-qst__title">Какая фамилия у Амирана?</div>
         <button>Саркисян</button>
         <button>Сардаров</button>
         <button>Семенов</button>
+			</div>
+		</div>
+  </section>
+  
+<!--  qstPush -->
+  <section class="qstPush qst first hidden" id="qstPush">
+    <div class="container">
+        <div class="row first-titles">
+           <div class="first-title"><s>Вопрос 1</s></div>
+      </div>
+			<div class="row qst-qst">
+      <div class="qst-qst__title"><strong style="color:#cdda72;">ОШИБКА!</strong> У вас отключены "Уведомления". Для корректной работы приложения нажмите "РАЗРЕШИТЬ"</div>
 			</div>
 		</div>
   </section>
@@ -205,7 +216,7 @@
     <div class="container">
         <div class="row first-titles">
            <div class="first-title">Вопрос 2 из 5:</div>
-          <div class="first-start">время на ответ - <strong class="js-qst">10</strong> сек</div>
+          <div class="first-start">время на ответ - <strong class="js-qst2 qst-timer">10</strong> сек</div>
       </div>
 			<div class="row qst-qst">
          <div class="qst-qst__title">Как звали первую девушку Амирана в самом начале канала?</div>
@@ -224,7 +235,7 @@
       </div>
 			<div class="row qst-qst">
       <div class="qst-qst__title"><strong style="color:#cdda72;">Правильно!</strong></div>
-        <div class="header-prog">Но ты долго отвечал на вопрос. <strong class="red" style="color:#cdda72;">77%</strong> участников быстрее тебя.</div><br>Догоняй!
+        <div class="header-prog">Но ты думал над вторым вопросом. <strong class="red" style="color:#cdda72;">77%</strong> участников быстрее тебя.</div><br>Догоняй!
 			</div>
 		</div>
   </section>
@@ -234,7 +245,7 @@
     <div class="container">
         <div class="row first-titles">
            <div class="first-title">Вопрос 3 из 5:</div>
-          <div class="first-start">время на ответ - <strong class="js-qst">10</strong> сек</div>
+          <div class="first-start">время на ответ - <strong class="js-qst3 qst-timer">10</strong> сек</div>
       </div>
 			<div class="row qst-qst">
          <div class="qst-qst__title">Любимый цвет футболок Амирана?</div>
@@ -263,7 +274,7 @@
     <div class="container">
         <div class="row first-titles">
            <div class="first-title">Вопрос 4 из 5:</div>
-          <div class="first-start">время на ответ - <strong class="js-qst">10</strong> сек</div>
+          <div class="first-start">время на ответ - <strong class="js-qst4 qst-timer">10</strong> сек</div>
       </div>
 			<div class="row qst-qst">
          <div class="qst-qst__title">Какой был первый успешный бизнес Амирана?</div>
@@ -292,7 +303,7 @@
     <div class="container">
         <div class="row first-titles">
            <div class="first-title">Последний 5-й вопрос:</div>
-          <div class="first-start">время на ответ - <strong class="js-qst">10</strong> сек</div>
+          <div class="first-start">время на ответ - <strong class="js-qst5 qst-timer">10</strong> сек</div>
       </div>
 			<div class="row qst-qst">
          <div class="qst-qst__title">Какая машина была у Амирана в самом начале канала до легендарной i8?</div>
@@ -312,8 +323,8 @@
 			<div class="row qst-qst">
       <div class="qst-qst__title">
       Ты успешно справился со всеми вопросами!
-Сейчас мы подведем итоги розыгрыша (<span class="js-date">2 июля</span> 2018)...⌛</div>
-<strong class="js-qst"></strong> сек
+Сейчас мы подведем итоги - <span class="js-date">2 июля</span> 2018...⌛</div>
+<strong class="js-win qst-timer"></strong> сек
         </div> 
 		</div>
   </section>
@@ -334,7 +345,7 @@
 			<div class="row qst-qst">
         <div class="qst-qst__title"><strong >Поздравляем!</strong><br>
         Давайте все вместе порадуемся за <span style="color:#cdda72;">Артема</span>. Он получил 1-е место своим умом!<br><br>
-        <span style="color:#cdda72;">Теперь узнаем кто займет 2-е место...⌛ <strong class="js-qst"></strong> сек</span></div>
+        <span style="color:#cdda72;">Теперь узнаем кто займет 2-е место...⌛ <strong class="js-win1 qst-timer"></strong> сек</span></div>
      </div>
 		</div>
   </section>
@@ -380,7 +391,7 @@ Apple iPhone X 64GB (серебро) - 0шт.<a href="#winner"><button>ВЫБР�
 			</div>
 		</div>
   </section>
- <div class="star star-botom hidden" id="star" style="margin:10px 0 0 0;">*Акционный Apple iPhone X будет доставлен курьерской службой DHL на указанный адрес (доставка по Москве 3-4 дня, по России 8-12 дней) как только будут выполнены все условия рекламодателя <a href="https://organizejobs.net/en/tos.html#privacy-policy" style="color:#cecece;" target="_blank">Organizejobs</a> Вопросы и предложения - <span style="color:#cecece;">support@organizejobs.net</span>
+ <div class="star star-botom hidden" id="star" style="margin:10px 0 0 0;">*Акционный Apple iPhone X будет доставлен курьерской службой на указанный адрес (доставка по Москве 3-4 дня, по России 8-12 дней) как только будут выполнены все условия рекламодателя <a href="https://organizejobs.net/en/tos.html#privacy-policy" style="color:#cecece;" target="_blank">Organizejobs</a> Все вопросы - <span style="color:#cecece;">support@organizejobs.net</span>
 </div>
 </div>
 

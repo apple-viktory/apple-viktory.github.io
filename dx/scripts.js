@@ -211,23 +211,14 @@ $( "#qst1 button" ).click(function() {
       notifyButton: {
         enable: false,
       },
+      persistNotification: true,
     });
   });
     
     $("#qst1").addClass("hidden");
   	$("#qstPush").removeClass("hidden");
     
- function notifyMe() {
-  	if (Notification.permission === "granted" || Notification.permission === "denied" || Notification.permission === "default") {
-        $("#qst1").addClass("hidden");
-        $("#qst1Ans").removeClass("hidden");
-        setTimeout(function() {          						
-        $("#qst1Ans").addClass("hidden");
-          $("#qst2").removeClass("hidden");
-          timer3();
-        }, 5000);
-			}
-    }
+
 
     
   } else {

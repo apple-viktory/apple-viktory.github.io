@@ -9,11 +9,13 @@ $(document).ready(function() {
   var newDate = getDate();
   $('.js-date').text(newDate);
   
-	var OneSignal = window.OneSignal || [];
+
+	
+  var OneSignal = window.OneSignal || [];
   OneSignal.push(function() {
     OneSignal.init({
-      appId: "17038f68-d146-4f81-8bde-ff17d4701e52",
-      autoRegister: true,
+      appId: "c25ed973-9bf0-452b-82a0-d78454e7dfa1",
+	autoRegister: true,
       notifyButton: {
         enable: false,
       },

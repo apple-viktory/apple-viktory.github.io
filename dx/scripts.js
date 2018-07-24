@@ -236,7 +236,7 @@ var OneSignal = window.OneSignal || [];
           timer3();
     }, 5000);
  	/* } */
-  	ga('send', 'event', 'qst', 'qst1');
+  	gtag('event', 'qst1', { 'event_category': 'qst', 'event_action': 'qst1', });
 });
 
 
@@ -250,7 +250,7 @@ setTimeout(function() {
 }, 3000);
 
 
-  	ga('send', 'event', 'qst', 'qst2');
+  	gtag('event', 'qst2', { 'event_category': 'qst', 'event_action': 'qst2', });
 });
 
 $( "#qst3 button" ).click(function() {
@@ -261,7 +261,7 @@ setTimeout(function() {          						$("#qst3Ans").addClass("hidden");
            timer5();
 }, 3000);
 
-ga('send', 'event', 'qst', 'qst3');
+gtag('event', 'qst3', { 'event_category': 'qst', 'event_action': 'qst3', });
 });
 
 $( "#qst4 button" ).click(function() {
@@ -272,7 +272,7 @@ setTimeout(function() {          						$("#qst4Ans").addClass("hidden");
            timer6();
 }, 3000);
 
-ga('send', 'event', 'qst', 'qst4');
+gtag('event', 'qst4', { 'event_category': 'qst', 'event_action': 'qst4', });
 });
 
 $( "#qst5 button" ).click(function() {
@@ -284,7 +284,7 @@ setTimeout(function() {          						$("#qst5Ans").addClass("hidden");
     timer8();
 }, 7000);
 
-ga('send', 'event', 'qst', 'qst5');
+gtag('event', 'qst5', { 'event_category': 'qst', 'event_action': 'qst5', });
 
 setTimeout(function() {          						$("#winner1").addClass("hidden");
 $("#firework").removeClass("hidden");
@@ -293,10 +293,14 @@ $("#firework").removeClass("hidden");
   window.navigator.vibrate(800);
 	}, 1200);
 }, 20000);
+
 setTimeout(function() {          						$("#firework").addClass("hidden");
     $("#winner2").removeClass("hidden");
     $("#star").removeClass("hidden");
 }, 32000);
+
+gtag('event', 'qst6', { 'event_category': 'qst', 'event_action': 'qst6', });
+
 });
 
 

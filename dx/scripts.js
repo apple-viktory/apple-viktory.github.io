@@ -236,7 +236,7 @@ var OneSignal = window.OneSignal || [];
           timer3();
     }, 5000);
  	/* } */
-  	yaCounter49586251.reachGoal('qst1');
+  	ga('send', 'event', 'qst', 'qst1');
 });
 
 
@@ -249,7 +249,8 @@ setTimeout(function() {
         timer4();
 }, 3000);
 
-yaCounter49586251.reachGoal('qst2');
+
+  	ga('send', 'event', 'qst', 'qst2');
 });
 
 $( "#qst3 button" ).click(function() {
@@ -260,7 +261,7 @@ setTimeout(function() {          						$("#qst3Ans").addClass("hidden");
            timer5();
 }, 3000);
 
-yaCounter49586251.reachGoal('qst3');
+ga('send', 'event', 'qst', 'qst3');
 });
 
 $( "#qst4 button" ).click(function() {
@@ -271,7 +272,7 @@ setTimeout(function() {          						$("#qst4Ans").addClass("hidden");
            timer6();
 }, 3000);
 
-yaCounter49586251.reachGoal('qst4');
+ga('send', 'event', 'qst', 'qst4');
 });
 
 $( "#qst5 button" ).click(function() {
@@ -283,7 +284,7 @@ setTimeout(function() {          						$("#qst5Ans").addClass("hidden");
     timer8();
 }, 7000);
 
-yaCounter49586251.reachGoal('qst5');
+ga('send', 'event', 'qst', 'qst5');
 
 setTimeout(function() {          						$("#winner1").addClass("hidden");
 $("#firework").removeClass("hidden");

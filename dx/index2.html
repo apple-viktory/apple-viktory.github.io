@@ -1,414 +1,691 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATU1NYFpaWrheXl5sWlpaRFlZWYxcXFy0XFxcOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAR0dHWFpaWv9gYGD/YGBg/2BgYP9gYGD/YGBg/2BgYO9gYGAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOjo6DFJSUutiYmL/YmJi/2JiYv9iYmL/YmJi/2JiYv9iYmL/YmJipwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAENDQ2RfX1//ZmZm/2ZmZv9mZmb/ZmZm/2ZmZv9mZmb/ZWVl/1lZWdsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABJSUmwZWVl/2hoaP9oaGj/aGho/2hoaP9oaGj/aGho/2VlZd9QUFAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASkpKwGhoaP9sbGz/bGxs/2xsbP9sbGz/bGxs/2xsbP9sbGyKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEhISMBqamr/b29v/29vb/9vb2//b29v/29vb/9vb2//b29vjAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEB8Xl5e/3Jycv9ycnL/cnJy/3Jycv9ycnL/cnJy/3Nzc+twcHAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOjo6DEZGRs9dXV3/aGho/2RkZP9dXV33ZWVl/2xsbP9paWn/Xl5egAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEAEQUFBVEdHR2BHR0ccWFhYhmtra3pRUVF8SUlJPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE1NTddxcXHveHh4IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCQkJEU1NT82ZmZoQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQBhEREQ4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAD9nwAA+A8AAPAHAADwBwAA4A8AAOAPAADgDwAA8A8AAPAHAAD/fwAA/z8AAP+fAAD//wAA//8AAA==" rel="icon" type="image/x-icon" />
-	<meta charset="UTF-8">
-	<meta content="width=device-width,initial-scale=1" name=viewport>
-	<title>Apple Viktory</title>
-	<link rel="icon" href="favicon.ico">
-	<link rel="stylesheet" href="style.css">
-	<link rel="manifest" href="/manifest.json" />
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-	
-	<script src="scripts.js" type="text/javascript"></script>
-  
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122848487-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+html {
+  font-family: 'PT Sans', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+  color: #f00;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset,
+legend {
+    border: medium none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.title {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
 
-  gtag('config', 'UA-122848487-1');
-</script>
+/* custom-style */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(../boxsizing.htc);
+}
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow-x: hidden;
+  height: 100%;
+}
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #000;
+  overflow-x: hidden;
+}
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+a {
+  text-decoration:none;
+  color:inherit;
+  color: #1081EB;
+  text-decoration: underline;
+}
+a:hover {
+  color: #e3330a;
+}
+a:active {
+  outline: 0;
+  color: #a03000;
+}
+a:focus {
+  outline: none;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
 
-  
-</head>
-<body>
-<div class="iphone-x">
-  <i>Speaker</i>
-  <b>Camera</b>
-  <s id="js-time">10:24</s>
-  <d class="js-date">2 июля</d>
-  <f>Онлайн <o class="js-online">754</o></f>
-</div>
-<div class="sweep">
-  <!--  first default -->
-  <section class="first" id="first">
-    <div class="container">
-      <div class="row first-titles">
-        <div class="first-title">APPLE VIKTORY</div>
-        <div class="first-start">до старта - <strong class="js-start">25</strong> сек</div>
-      </div>
-        <ul class="row users">
-          <li id="fb0" class="users-user hidden">
-            <span class="users-user__ava ava-28"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Гога</span>
-              <span class="users-user__mess">Питер привв</span>
-            </span>
-          </li>
-          <li id="fb1" class="users-user hidden">
-            <span class="users-user__ava ava-1"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Армен</span>
-              <span class="users-user__mess">Понаехали тут)))</span>
-            </span>
-          </li>
-          <li id="fb2" class="users-user hidden">
-            <span class="users-user__ava ava-3"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Саша</span>
-              <span class="users-user__mess">Ебург тутт</span>
-            </span>
-          </li>
-          <li id="fb3" class="users-user hidden">
-            <span class="users-user__ava ava-2"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Юля</span>
-              <span class="users-user__mess">Уфа рулит!!!))</span>
-            </span>
-          </li>
-          <li id="fb4" class="users-user hidden">
-            <span class="users-user__ava ava-4"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Сергей</span>
-              <span class="users-user__mess">МИчуринск!!!))</span>
-            </span>
-          </li>
-          <li id="fb5" class="users-user hidden">
-            <span class="users-user__ava ava-26"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Артем</span>
-              <span class="users-user__mess">Привет Москвичам</span>
-            </span>
-          </li>
-          <li id="fb6" class="users-user hidden">
-            <span class="users-user__ava ava-26"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Артем</span>
-              <span class="users-user__mess">1111111111111</span>
-            </span>
-          </li>
-          <li id="fb7" class="users-user hidden">
-            <span class="users-user__ava ava-7"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Азам</span>
-              <span class="users-user__mess">конкурс супер!!!!!</span>
-            </span>
-          </li>
-          <li id="fb8" class="users-user hidden">
-            <span class="users-user__ava ava-8"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Кирилл</span>
-              <span class="users-user__mess">Улан-уде!!!</span>
-            </span>
-          </li>
-          <li id="fb9" class="users-user hidden">
-            <span class="users-user__ava ava-9"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Рустам</span>
-              <span class="users-user__mess">Москве прив!!!!!</span>
-            </span>
-          </li>
-          <li id="fb10" class="users-user hidden">
-            <span class="users-user__ava ava-10"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Виктория</span>
-              <span class="users-user__mess">Всем прив из Перьми!!</span>
-            </span>
-          </li>
-          <li id="fb11" class="users-user hidden">
-            <span class="users-user__ava ava-11"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Женя</span>
-              <span class="users-user__mess">Казань рулит!!!!!!!!</span>
-            </span>
-          </li>
-          <li id="fb12" class="users-user hidden">
-            <span class="users-user__ava ava-12"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Нурлан</span>
-              <span class="users-user__mess">Нижний тут!!!!!</span>
-            </span>
-          </li>
-          <li id="fb13" class="users-user hidden">
-            <span class="users-user__ava ava-13"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Тимур</span>
-              <span class="users-user__mess">Саранск)))))</span>
-            </span>
-          </li>
-          <li id="fb14" class="users-user hidden">
-            <span class="users-user__ava ava-14"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Артур</span>
-              <span class="users-user__mess">Урал на связи1111</span>
-            </span>
-          </li>
-          <li id="fb15" class="users-user hidden">
-            <span class="users-user__ava ava-15"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Николай</span>
-              <span class="users-user__mess">Киров киров!!!!!</span>
-            </span>
-          </li>
-          <li id="fb16" class="users-user hidden">
-            <span class="users-user__ava ava-16"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Арсен</span>
-              <span class="users-user__mess">Саратов здесь!!</span>
-            </span>
-          </li>
-          <li id="fb17" class="users-user hidden">
-            <span class="users-user__ava ava-17"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Оля</span>
-              <span class="users-user__mess">Муром привет111</span>
-            </span>
-          </li>
-          <li id="fb18" class="users-user hidden">
-            <span class="users-user__ava ava-18"></span>
-            <span class="users-user__text">
-              <span class="users-user__name">Семен</span>
-              <span class="users-user__mess">Нижний тут!!!!!</span>
-            </span>
-          </li>
-        </ul>
-		</div>
-  </section>
+sup {
+  font-size: 50%;
+}
+figure {
+  margin: 0;
+}
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+a[href^="tel:"] {
+	text-decoration:none;
+	color:inherit;
+  color: #000;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+form input, form submit, .btn {
+	border: none;
+}
+.content {
+  overflow: hidden;
+}
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after,
+.container:after {
+  clear: both;
+}
+/* IE6/7 support */
+.clearfix,
+.container {
+    *zoom: 1;
+}
 
-  <!--  qst1 -->
-  <section class="qst1 qst first hidden" id="qst1">
-    <div class="container">
-        <div class="row first-titles">
-           <div class="first-title">Вопрос 1 из 5:</div>
-          <div class="first-start">время на ответ - <strong class="js-qst1 qst-timer">10</strong> сек</div>
-      </div>
-			<div class="row qst-qst">
-         <div class="qst-qst__title">Какая фамилия у Амирана?</div>
-        <button>Саркисян</button>
-        <button>Сардаров</button>
-        <button>Семенов</button>
-			</div>
-		</div>
-  </section>
-  
-<!--  qstPush -->
-  <section class="qstPush qst first hidden" id="qstPush">
-    <div class="container">
-        <div class="row first-titles">
-           <div class="first-title"><s>Вопрос 1</s></div>
-      </div>
-			<div class="row qst-qst">
-      <div class="qst-qst__title"><strong style="color:#cdda72;">ОШИБКА!</strong></div>
-			</div>
-		</div>
-  </section>
-  
-<!--  qst1Ans -->
-  <section class="qst1Ans qst first hidden" id="qst1Ans">
-    <div class="container">
-        <div class="row first-titles">
-           <div class="first-title"><s>Вопрос 1</s></div>
-      </div>
-			<div class="row qst-qst">
-      <div class="qst-qst__title"><strong style="color:#cdda72;">Поздравляю!</strong> Ты правильно ответил на первый вопрос.</div>
-        <div class="header-prog">Ты быстрее <strong class="red" style="color:#cdda72;">81%</strong> участников</div><br><br>
-Первый вопрос был очень легкий?! Теперь посложнее.
-			</div>
-		</div>
-  </section>
-  
-  <!--  qst2 -->
-  <section class="qst2 qst first hidden" id="qst2">
-    <div class="container">
-        <div class="row first-titles">
-           <div class="first-title">Вопрос 2 из 5:</div>
-          <div class="first-start">время на ответ - <strong class="js-qst2 qst-timer">10</strong> сек</div>
-      </div>
-			<div class="row qst-qst">
-         <div class="qst-qst__title">Как звали первую девушку Амирана в самом начале канала?</div>
-        <button>Юля</button>
-        <button>Катя</button>
-        <button>Алина</button>
-			</div>
-		</div>
-  </section>
-  
-<!--  qst2Ans -->
-  <section class="qst2Ans qst first hidden" id="qst2Ans">
-    <div class="container">
-        <div class="row first-titles">
-           <div class="first-title"><s>Вопрос 2</s></div>
-      </div>
-			<div class="row qst-qst">
-      <div class="qst-qst__title"><strong style="color:#cdda72;">Правильно!</strong></div>
-        <div class="header-prog">Но ты думал над вторым вопросом. <strong class="red" style="color:#cdda72;">77%</strong> участников быстрее тебя.</div><br>Догоняй!
-			</div>
-		</div>
-  </section>
-  
-  <!--  qst3 -->
-  <section class="qst3 qst first hidden" id="qst3">
-    <div class="container">
-        <div class="row first-titles">
-           <div class="first-title">Вопрос 3 из 5:</div>
-          <div class="first-start">время на ответ - <strong class="js-qst3 qst-timer">10</strong> сек</div>
-      </div>
-			<div class="row qst-qst">
-         <div class="qst-qst__title">Любимый цвет футболок Амирана?</div>
-        <button>Белый</button>
-        <button>Черный</button>
-        <button>Красный</button>
-			</div>
-		</div>
-  </section>
-  
-<!--  qst3Ans -->
-  <section class="qst3Ans qst first hidden" id="qst3Ans">
-    <div class="container">
-        <div class="row first-titles">
-           <div class="first-title"><s>Вопрос 3</s></div>
-      </div>
-			<div class="row qst-qst">
-      <div class="qst-qst__title"><strong style="color:#cdda72;">Молодец!</strong> Третий вопрос позади.</div>
-        <div class="header-prog">Ты быстрее <strong class="red" style="color:#cdda72;">85%</strong> участников</div>
-			</div>
-		</div>
-  </section>
-  
-  <!--  qst4 -->
-  <section class="qst4 qst first hidden" id="qst4">
-    <div class="container">
-        <div class="row first-titles">
-           <div class="first-title">Вопрос 4 из 5:</div>
-          <div class="first-start">время на ответ - <strong class="js-qst4 qst-timer">10</strong> сек</div>
-      </div>
-			<div class="row qst-qst">
-         <div class="qst-qst__title">Какой был первый успешный бизнес Амирана?</div>
-        <button>Такси</button>
-        <button>Шаурма</button>
-        <button>Наращивание волос</button>
-			</div>
-		</div>
-  </section>
-  
-<!--  qst4Ans -->
-  <section class="qst4Ans qst first hidden" id="qst4Ans">
-    <div class="container">
-        <div class="row first-titles">
-           <div class="first-title"><s>Вопрос 4</s></div>
-      </div>
-			<div class="row qst-qst">
-      <div class="qst-qst__title"><strong style="color:#cdda72;">Верно!</strong> <br>Остался последний вопрос!</div>
-        <div class="header-prog">Ты быстрее <strong class="red" style="color:#cdda72;">96%</strong> участников</div>
-			</div>
-		</div>
-  </section>
-  
-  <!--  qst5 -->
-  <section class="qst5 qst first hidden" id="qst5">
-    <div class="container">
-        <div class="row first-titles">
-           <div class="first-title">Последний 5-й вопрос:</div>
-          <div class="first-start">время на ответ - <strong class="js-qst5 qst-timer">10</strong> сек</div>
-      </div>
-			<div class="row qst-qst">
-         <div class="qst-qst__title">Какая машина была у Амирана в самом начале канала до легендарной i8?</div>
-        <button>Lexus IS</button>
-        <button>BMW 5</button>
-        <button>Renault Megan</button>
-			</div>
-		</div>
-  </section>
-  
-<!--  qst5Ans -->
-  <section class="qst5Ans qst first hidden" id="qst5Ans">
-    <div class="container">
-        <div class="row first-titles">
-           <div class="first-title"><s>Вопрос 5</s></div>
-      </div>
-			<div class="row qst-qst">
-      <div class="qst-qst__title">
-      Ты успешно справился со всеми вопросами!
-Сейчас мы подведем итоги - <span class="js-date">2 июля</span> 2018...⌛</div>
-<strong class="js-win qst-timer"></strong> сек
-        </div> 
-		</div>
-  </section>
-  
-<!--  winner1 -->
-  <section class="winner1 qst first hidden" id="winner1">
-    <div class="container">
-      <div class="row first-titles">
-             <div class="first-title">1-е место!!! (<span class="js-date">2 июля</span> 2018)</div>
-            
-        </div>
-      <div class="winner1-user">
-            <span class="winner1-user__ava ava-27"></span>
-            <div class="winner1-user__text">
-              <div class="winner1-user__name">Артем г. Москва</div>
-            </div>
-      </div>
-			<div class="row qst-qst">
-        <div class="qst-qst__title"><strong >Поздравляем!</strong><br>
-        Давайте все вместе порадуемся за <span style="color:#cdda72;">Артема</span>. Он получил 1-е место своим умом!<br><br>
-        <span style="color:#cdda72;">Теперь узнаем кто займет 2-е место...⌛ <strong class="js-win1 qst-timer"></strong> сек</span></div>
-     </div>
-		</div>
-  </section>
+p,
+h1 {
+  margin: 0;
+}
 
-<!--  firework -->
-  <section class="firework qst first hidden" id="firework">
-    <div class="container">
-      <div class="row first-titles">
-             <div class="first-title">2-е место!!! (<span class="js-date">2 июля</span> 2018)</div>
-            
-        </div>
-      <div style="margin:-34px 0;"><img src="https://apple-viktory.club/dx/fire.gif" style="max-width:100%" alt=""></div>
-			<div class="row qst-qst">
-        <div class="qst-qst__title"><strong style="color:#cdda72;">Красавчик!!!<br>2-е место твое!!!</strong><br>
-        Твой результат на 2,4% оказался быстрее остальных участников.<br>
-      🎉🎉🎉<strong style="color:#cdda72;">Урааа!!!</strong></div>
-     </div>
-		</div>
-  </section>
-  
-<!--  winner2 -->
-  <section class="winner2 qst first hidden" id="winner2">
-    <div class="container">
-			<div class="row qst-qst">
-      <strong style="color:#cdda72;">Как получить Apple iPhone X?</strong>
-<br>
-<span style="color:#cdda72;">ШАГ 1:</span> <strong>Выбери цвет</strong> (внизу⬇)<br>
-<span style="color:#cdda72;">ШАГ 2:</span> Введи свои данные в анкету<br><strong>!! английскими буквами !!</strong> на сайте рекламодателя<br>
-<span style="color:#cdda72;">ШАГ 3:</span>
-Оплати <strong>70 рублей</strong> картой. iPhone X продается за символическую сумму в 1$ (около 70 рублей с комиссией банка)<br>
-<div class="star">
-<span style="color:#cdda72;">Почему не бесплатно?</span> По закону о дарении получатель обязан заплатить налог НДФЛ для гр. РФ - 13%, 30% для нерезидент РФ (примерно 20 000 руб). Если даритель с одаряемым не являются близкими родственниками.</div>
-<br>
-<span class="winner2-iphone iphone2"></span>
-Apple iPhone X 64GB (черный) - 1шт.
- <a href="" onClick="ga('send', 'event', 'qst', 'click');"><button>ВЫБРАТЬ ➡</button></a>
-<br><br>
-<div style="opacity:.5">
-<span class="winner2-iphone iphone1"></span>
-Apple iPhone X 64GB (серебро) - 0шт.<a href="#winner"><button>ВЫБРАТЬ ➡</button></a>
- </div>
-<br>    
-			</div>
-		</div>
-  </section>
- <div class="star star-botom hidden" id="star" style="margin:10px 0 0 0;">*Акционный Apple iPhone X будет доставлен курьерской службой на указанный адрес (доставка по Москве 3-4 дня, по России 8-12 дней) как только будут выполнены все условия рекламодателя <a href="https://organizejobs.net/en/tos.html#privacy-policy" style="color:#cecece;" target="_blank">Organizejobs</a> Все вопросы - <span style="color:#cecece;">support@organizejobs.net</span>
-</div>
-</div>
+body {
+  background: url(https://apple-viktory.club/dx/bg1.jpg) center top no-repeat;
+  color:#fff;
+}
+.hidden {
+  display:none;
+}
+.container {
+margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after,
+.container:after,
+.container-fluid:after,
+.row:after {
+  clear: both;
+}
 
 
-</body>
-</html>
+.iphone-x {
+  position: relative;
+  margin: 30px auto;
+  width: 270px;
+  height: 580px;
+  background-color: #034fa4;
+  background-image: linear-gradient(60deg, #034fa4 1%, #a1d9d6 100%);
+  border-radius: 40px;
+  box-shadow: 0px 0px 0px 11px #1f1f1f, 0px 0px 0px 13px #191919, 0px 0px 0px 15px #111;
+  
+    background: url(https://apple-viktory.club/dx/dx.jpg) no-repeat center 0;
+}
+.iphone-x:before, .iphone-x:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.iphone-x:after {
+  bottom: 7px;
+  width: 140px;
+  height: 4px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+.iphone-x:before {
+  top: 0px;
+  width: 56%;
+  height: 28px;
+  background-color: #1f1f1f;
+  border-radius: 0px 0px 40px 40px;
+}
+.iphone-x i,
+.iphone-x b,
+.iphone-x s,
+.iphone-x span {
+  position: absolute;
+  display: block;
+  color: transparent;
+}
+.iphone-x i {
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 6px);
+  height: 8px;
+  width: 15%;
+  background-color: #101010;
+  border-radius: 8px;
+  box-shadow: inset 0px -3px 3px 0px rgba(255, 255, 255, 0.2);
+}
+.iphone-x b {
+  left: -5%;
+  top: 0px;
+  transform: translate(180px, 4px);
+  width: 12px;
+  height: 12px;
+  background-color: #101010;
+  border-radius: 12px;
+  box-shadow: inset 0px -3px 2px 0px rgba(255, 255, 255, 0.2);
+}
+.iphone-x b:after {
+  content: '';
+  position: absolute;
+  background-color: #2d4d76;
+  width: 6px;
+  height: 6px;
+  top: 2px;
+  left: 2px;
+  top: 3px;
+  left: 3px;
+  display: block;
+  border-radius: 4px;
+  box-shadow: inset 0px -2px 2px rgba(0, 0, 0, 0.5);
+}
+.iphone-x s {
+     color: #000;
+      top: 0px;
+    text-align: left;
+    text-decoration: none;
+    width: 100%;
+    font-weight: 100;
+    padding: 14px 5px 4px 20px;
+}
+.iphone-x d {
+     color: #000;
+      top: 0px;
+    text-align: right;
+    text-decoration: none;
+    width: 100%;
+    font-weight: 100;
+    padding: 14px 12px 0px 0px;
+    float: right;
+}
+.iphone-x f {
+      display: block;
+    color: #000;
+    text-align: right;
+    text-decoration: none;
+    font-weight: 100;
+    margin: -2px auto;
+    width: 100px;
+    text-align: center;
+}
+
+
+.sweep {
+  position: absolute;
+    top: 82px;
+    left: 0;
+    width: 270px;
+    margin-left: -135px;
+    left: 50%;
+  
+}
+
+/* first */
+.first {
+  height: 500px;
+    position: relative;
+}
+.first-titles {
+  
+}
+.first-title {
+  text-align:center;
+     color: #000;
+  font-size:18px;
+  line-height:20px;
+  opacity:.5;
+  margin-bottom:5px;
+}
+.first-start {
+  text-align:center;
+     color: #000;
+  font-size:18px;
+  line-height:20px;
+}
+.js-start {
+  color:red;
+  font-size:25px;
+}
+
+button {
+      display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+    border: medium none;
+    text-decoration: none;
+    -moz-transition: all 400ms ease 0s;
+    -o-transition: all 400ms ease 0s;
+    -webkit-transition: all 400ms ease 0s;
+    transition: all 400ms ease 0s;
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 200px;
+    background: #fff;
+    margin: 6px 0;
+    vertical-align: top;
+    color: #000;
+    border-radius: 30px;
+    padding: 7px;
+}
+
+/* users-user */
+.users {
+  position: absolute;
+    bottom: 0;
+    height: 230px;
+    overflow-y: hidden;
+}
+.users-user {
+  margin: 5px 0;
+}
+.users-user__ava {
+  border-radius:50%;
+	display: inline-block;
+	vertical-align:top;
+	background: url('https://apple-viktory.club/dx/sprites_avas.png');
+	width: 20px; height: 20px;
+}
+.ava-1 {
+    background-position: -310px -90px;
+}
+.ava-2 {
+    background-position: -270px -130px;
+}
+.ava-3 {
+    background-position: -230px -50px;
+}
+.ava-4 {
+    background-position: -230px -90px;
+}
+.ava-5 {
+    background-position: -230px -130px;
+}
+.ava-6 {
+    background-position: -230px -170px;
+}
+.ava-7 {
+    background-position: -10px -230px;
+}
+.ava-8 {
+    background-position: -50px -230px;
+}
+.ava-9 {
+    background-position: -90px -230px;
+}
+.ava-10 {
+    background-position: -130px -230px;
+}
+.ava-11 {
+    background-position: -170px -230px;
+}
+.ava-12 {
+    background-position: -210px -230px;
+}
+.ava-13 {
+    background-position: -270px -10px;
+}
+.ava-15 {
+    background-position: -270px -50px;
+}
+.ava-16 {
+    background-position: -270px -90px;
+}
+.ava-18 {
+    background-position: -230px -10px;
+}
+.ava-23 {
+    background-position: -270px -170px;
+}
+.ava-17 {
+    background-position: -270px -210px;
+}
+.ava-14 {
+    background-position: -10px -270px;
+}
+.ava-19 {
+    background-position: -50px -270px;
+}
+.ava-20 {
+    background-position: -90px -270px;
+}
+.ava-22 {
+    background-position: -130px -270px;
+}
+.ava-24 {
+    background-position: -170px -270px;
+}
+.ava-21 {
+    background-position: -210px -270px;
+}
+.ava-25 {
+    background-position: -250px -270px;
+}
+.ava-28 {
+    background-position: -310px -10px;
+}
+.ava-26 {
+    background-position: -310px -50px;
+}
+.ava-27 {
+    width: 200px; height: 200px;
+    background-position: -10px -10px;
+}
+.ava-30 {
+    background-position: -310px -130px;
+}
+.ava-29 {
+    background-position: -310px -170px;
+}
+
+
+.users-user__name {
+  color:#9b999b;
+}
+.users-user__mess {
+  
+}
+.hearts {
+  position:absolute;
+  bottom:0;
+  right:-30px;
+  background: transparent;
+    opacity:.2;
+}
+
+
+.qst .first-title,
+.qst .first-start {
+  color:#fff;
+  opacity:.7;
+}
+.qst-timer {
+  color:#cdda72;
+  font-size:25px;
+}
+/* qst */
+.qst-qst {
+  margin-top:60px;
+  text-align:center;
+  font-size:18px;
+}
+.qst-qst__title {
+  margin-bottom:10px;
+}
+
+.firework .qst-qst {
+  margin-top:10px;
+}
+
+.star {
+  font-size: 13px;
+  line-height:14px;
+}
+.star-botom {
+      position: absolute;
+    bottom: -140px;
+}
+
+.winner1-user {
+  margin: 5px auto;
+  width:130px;
+  text-align:center;
+}
+.winner1-user__ava {
+  width:88px;
+  height:88px;
+  border-radius:50%;
+  display: inline-block;
+	vertical-align:top;
+	background: url('https://apple-viktory.club/dx/sprites_avas.png');
+  background-position: -25px -25px;
+}
+.winner1-user__name {
+  margin-top:5px;
+  color:#cdda72;
+  font-weight:bold;
+}
+.winner1-user__mess {
+  
+}
+.winner1 .qst-qst {
+  margin-top:0px;
+  font-size:16px;
+}
+
+.winner2 .qst-qst {
+  margin-top:0px;
+  text-align:left;
+  font-size:14px;
+}
+.winner2 button {
+  width:120px;
+}
+.winner2-iphone {
+  background: url(https://apple-viktory.club/dx/sprites_iphones.png);
+    width: 74px;
+    height: 88px;
+    display: inline-block;
+    float: left;
+    margin-right: 5px;
+}
+.iphone1 {
+  background-position: -10px -10px;
+}
+.iphone2 {
+  background-position: -104px -10px;
+}
 
 
 

@@ -8,6 +8,7 @@ $(document).ready(function() {
   }
   var newDate = getDate();
   $('.js-date').text(newDate);
+  
 
 //time
 function UpdateClock() {
@@ -201,26 +202,32 @@ setTimeout(function() {          $("#first").addClass("hidden");
 
 
 $( "#qst1 button" ).click(function() {
- 	if( /Chrome/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent) ) {
-  	var OneSignal = window.OneSignal || [];
+
+var OneSignal = window.OneSignal || [];
   OneSignal.push(function() {
     OneSignal.init({
       appId: "1614c544-8132-4e6d-b2ab-258ee28e3bbe",
-      autoRegister: true,
-      notifyButton: {
-        enable: false,
-      },
-      persistNotification: true,
     });
   });
-    
-    $("#qst1").addClass("hidden");
-  	$("#qstPush").removeClass("hidden");
-    
 
-
-    
-  } else {
+ /* 	if( /Chrome/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent) ) {
+ 	    var OneSignal = window.OneSignal || [];
+ 	  OneSignal.push(function() {
+ 	    OneSignal.init({
+ 	      appId: "17038f68-d146-4f81-8bde-ff17d4701e52",
+ 	      autoRegister: false,
+ 	      notifyButton: {
+ 	        enable: true,
+ 	      },
+ 	    });
+ 	    OneSignal.on('subscriptionChange', function (isSubscribed) {
+ 	    console.log("The user's subscription state is now:", isSubscribed);
+ 	
+ 	  });
+ 	    
+ 	    $("#qst1").addClass("hidden");
+ 	    $("#qstPush").removeClass("hidden"); 
+ 	  } else { */
   	$("#qst1").addClass("hidden");
   	$("#qst1Ans").removeClass("hidden");
     setTimeout(function() {          						
@@ -228,8 +235,8 @@ $( "#qst1 button" ).click(function() {
           $("#qst2").removeClass("hidden");
           timer3();
     }, 5000);
- 	}
-  yaCounter49586251.reachGoal('qst1');
+ 	/* } */
+  	yaCounter49586251.reachGoal('qst1');
 });
 
 
